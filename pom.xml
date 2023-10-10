@@ -4,7 +4,7 @@
 
     <groupId>com.clinic</groupId>
     <artifactId>pet-clinic-spring</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.2-SNAPSHOT</version>
 
     <modules>
         <module>pet-clinic-data</module>
@@ -54,7 +54,6 @@
 
     <scm>
         <developerConnection>scm:git:https://github.com/DashaShevkoplyas/pet-clinic-spring.git</developerConnection>
-      <tag>pet-clinic-spring-0.0.1</tag>
   </scm>
 
 </project>
