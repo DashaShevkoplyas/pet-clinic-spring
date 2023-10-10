@@ -1,5 +1,6 @@
 package com.clinic.petclinicspring;
 
+import com.clinic.petclinicspring.models.Person;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
