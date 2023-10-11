@@ -1,6 +1,9 @@
 package com.clinic.petclinicspring.models;
 
-public class Person extends BaseEntity{
+/**
+ * Base class with fields common to all human-being entities.
+ */
+public class Person extends BaseEntity {
     private String firstName;
     private String lastname;
 
