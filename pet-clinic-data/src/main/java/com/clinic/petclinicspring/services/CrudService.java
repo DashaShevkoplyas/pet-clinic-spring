@@ -28,5 +28,11 @@ public interface CrudService<T, ID> {
      * Delete entity by id.
      * @param id
      */
-    void delete(ID id);
+    void deleteById(ID id);
+
+    /**
+     * Delete entity.
+     * @param entity
+     */
+    void delete(T entity);
 }
