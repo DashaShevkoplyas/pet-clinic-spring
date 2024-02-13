@@ -3,6 +3,7 @@ package com.clinic.petclinicspring.services.springdatajpa;
 import com.clinic.petclinicspring.models.PetType;
 import com.clinic.petclinicspring.repositories.PetTypeRepository;
 import com.clinic.petclinicspring.services.PetTypeService;
+import com.clinic.petclinicspring.services.map.PetTypeMapService;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
@@ -12,7 +13,7 @@ import java.util.Set;
 
 /**
  * Alternative implementation of the pet type service,
- * opposite of map implementation {@link com.clinic.petclinicspring.services.map.PetTypeServiceMap} using JPA.
+ * opposite of map implementation {@link PetTypeMapService} using JPA.
  */
 @Service
 @Profile("springdatajpa")

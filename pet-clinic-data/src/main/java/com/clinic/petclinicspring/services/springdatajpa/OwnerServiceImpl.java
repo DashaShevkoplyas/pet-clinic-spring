@@ -5,6 +5,7 @@ import com.clinic.petclinicspring.repositories.OwnerRepository;
 import com.clinic.petclinicspring.repositories.PetRepository;
 import com.clinic.petclinicspring.repositories.PetTypeRepository;
 import com.clinic.petclinicspring.services.OwnerService;
+import com.clinic.petclinicspring.services.map.OwnerMapService;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
@@ -14,7 +15,7 @@ import java.util.Set;
 
 /**
  * Alternative implementation of the owner service,
- * opposite of map implementation {@link com.clinic.petclinicspring.services.map.OwnerServiceMap} using JPA.
+ * opposite of map implementation {@link OwnerMapService} using JPA.
  */
 @Service
 @Profile("springdatajpa")
