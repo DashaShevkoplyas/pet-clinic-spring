@@ -1,11 +1,20 @@
 package com.clinic.petclinicspring.models;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
 /**
  * Basic contact information.
  */
-public class ContactInfo {
+@Entity
+@Table(name = "contacts")
+public class ContactInfo extends BaseEntity {
+    @Column(name = "address")
     private String address;
+    @Column(name = "city")
     private String city;
+    @Column(name = "phone")
     private String phone;
 
     public String getAddress() {

@@ -1,10 +1,16 @@
 package com.clinic.petclinicspring.models;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.MappedSuperclass;
+
 /**
  * Base class with fields common to all human-being entities.
  */
+@MappedSuperclass
 public class Person extends BaseEntity {
+    @Column(name = "first_name")
     private String firstName;
+    @Column(name = "last_name")
     private String lastName;
 
     public String getFirstName() {
