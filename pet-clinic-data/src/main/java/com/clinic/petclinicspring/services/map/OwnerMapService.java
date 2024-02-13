@@ -6,6 +6,7 @@ import com.clinic.petclinicspring.services.OwnerService;
 import com.clinic.petclinicspring.services.PetService;
 import com.clinic.petclinicspring.services.PetTypeService;
 import com.clinic.petclinicspring.services.exceptions.OwnerServiceException;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.HashSet;
@@ -13,6 +14,7 @@ import java.util.Optional;
 import java.util.Set;
 
 @Service
+@Profile({"default", "mapservice"})
 public class OwnerMapService extends AbstractMapService<Owner, Long> implements OwnerService {
     private final PetService petService;
     private final PetTypeService petTypeService;

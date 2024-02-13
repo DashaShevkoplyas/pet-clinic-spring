@@ -7,6 +7,7 @@ import com.clinic.petclinicspring.models.PetType;
 import com.clinic.petclinicspring.models.Speciality;
 import com.clinic.petclinicspring.models.Vet;
 import com.clinic.petclinicspring.models.Visit;
+import com.clinic.petclinicspring.services.ContactInfoService;
 import com.clinic.petclinicspring.services.OwnerService;
 import com.clinic.petclinicspring.services.PetTypeService;
 import com.clinic.petclinicspring.services.SpecialityService;
@@ -25,18 +26,21 @@ public class DataLoader implements CommandLineRunner {
     private final PetTypeService petTypeService;
     private final SpecialityService specialityService;
     private final VisitService visitService;
+    private final ContactInfoService contactInfoService;
 
     public DataLoader(
             OwnerService ownerService,
             VetService vetService,
             PetTypeService petTypeService,
             SpecialityService specialityService,
-            VisitService visitService) {
+            VisitService visitService,
+            ContactInfoService contactInfoService) {
         this.ownerService = ownerService;
         this.vetService = vetService;
         this.petTypeService = petTypeService;
         this.specialityService = specialityService;
         this.visitService = visitService;
+        this.contactInfoService = contactInfoService;
     }
 
     @Override
@@ -68,6 +72,8 @@ public class DataLoader implements CommandLineRunner {
         owner1Contact.setAddress("123 Street");
         owner1Contact.setCity("California");
         owner1Contact.setPhone("1234456");
+        contactInfoService.save(owner1Contact);
+
         owner1.setContactInfo(owner1Contact);
 
         Pet vionaPet1 = new Pet();
@@ -100,6 +106,8 @@ public class DataLoader implements CommandLineRunner {
         owner2Contact.setAddress("567 Street");
         owner2Contact.setCity("Tampa");
         owner2Contact.setPhone("34567");
+        contactInfoService.save(owner2Contact);
+
         owner2.setContactInfo(owner2Contact);
 
         Pet riddlyPet1 = new Pet();
