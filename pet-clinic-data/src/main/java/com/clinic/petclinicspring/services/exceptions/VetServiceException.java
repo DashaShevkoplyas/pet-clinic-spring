@@ -1,10 +1,10 @@
-package com.clinic.petclinicspring.services.map;
+package com.clinic.petclinicspring.services.exceptions;
 
 /**
  * Vet service exception class.
  */
 public class VetServiceException extends RuntimeException {
-    VetServiceException(String message) {
+    public VetServiceException(String message) {
         super(message);
     }
 }

@@ -4,6 +4,7 @@ import com.clinic.petclinicspring.models.Speciality;
 import com.clinic.petclinicspring.models.Vet;
 import com.clinic.petclinicspring.services.SpecialityService;
 import com.clinic.petclinicspring.services.VetService;
+import com.clinic.petclinicspring.services.exceptions.VetServiceException;
 import org.springframework.stereotype.Service;
 
 import java.util.HashSet;

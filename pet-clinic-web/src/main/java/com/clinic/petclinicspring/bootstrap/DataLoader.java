@@ -1,15 +1,17 @@
 package com.clinic.petclinicspring.bootstrap;
 
-import com.clinic.petclinicspring.models.Owner;
-import com.clinic.petclinicspring.models.PetType;
-import com.clinic.petclinicspring.models.Vet;
-import com.clinic.petclinicspring.models.Pet;
 import com.clinic.petclinicspring.models.ContactInfo;
+import com.clinic.petclinicspring.models.Owner;
+import com.clinic.petclinicspring.models.Pet;
+import com.clinic.petclinicspring.models.PetType;
 import com.clinic.petclinicspring.models.Speciality;
+import com.clinic.petclinicspring.models.Vet;
+import com.clinic.petclinicspring.models.Visit;
 import com.clinic.petclinicspring.services.OwnerService;
 import com.clinic.petclinicspring.services.PetTypeService;
 import com.clinic.petclinicspring.services.SpecialityService;
 import com.clinic.petclinicspring.services.VetService;
+import com.clinic.petclinicspring.services.VisitService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -22,12 +24,19 @@ public class DataLoader implements CommandLineRunner {
     private final VetService vetService;
     private final PetTypeService petTypeService;
     private final SpecialityService specialityService;
+    private final VisitService visitService;
 
-    public DataLoader(OwnerService ownerService, VetService vetService, PetTypeService petTypeService, SpecialityService specialityService) {
+    public DataLoader(
+            OwnerService ownerService,
+            VetService vetService,
+            PetTypeService petTypeService,
+            SpecialityService specialityService,
+            VisitService visitService) {
         this.ownerService = ownerService;
         this.vetService = vetService;
         this.petTypeService = petTypeService;
         this.specialityService = specialityService;
+        this.visitService = visitService;
     }
 
     @Override
@@ -75,6 +84,13 @@ public class DataLoader implements CommandLineRunner {
         owner1.setPets(Set.of(vionaPet1, vionaPet2));
 
         ownerService.save(owner1);
+
+        Visit visit1 = new Visit();
+        visit1.setPet(vionaPet1);
+        visit1.setDescription("dog visit");
+        visit1.setDate(LocalDate.now());
+
+        visitService.save(visit1);
 
         Owner owner2 = new Owner();
         owner2.setFirstName("Riddly");

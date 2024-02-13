@@ -2,6 +2,7 @@ package com.clinic.petclinicspring.services.map;
 
 import com.clinic.petclinicspring.models.Visit;
 import com.clinic.petclinicspring.services.VisitService;
+import com.clinic.petclinicspring.services.exceptions.VisitServiceException;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;

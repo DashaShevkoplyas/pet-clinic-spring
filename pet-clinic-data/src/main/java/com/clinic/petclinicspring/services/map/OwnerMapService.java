@@ -5,6 +5,7 @@ import com.clinic.petclinicspring.models.Pet;
 import com.clinic.petclinicspring.services.OwnerService;
 import com.clinic.petclinicspring.services.PetService;
 import com.clinic.petclinicspring.services.PetTypeService;
+import com.clinic.petclinicspring.services.exceptions.OwnerServiceException;
 import org.springframework.stereotype.Service;
 
 import java.util.HashSet;

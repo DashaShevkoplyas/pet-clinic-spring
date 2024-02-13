@@ -1,10 +1,10 @@
-package com.clinic.petclinicspring.services.map;
+package com.clinic.petclinicspring.services.exceptions;
 
 /**
  * Owner service exception class.
  */
 public class OwnerServiceException extends RuntimeException {
-    OwnerServiceException(String message) {
+    public OwnerServiceException(String message) {
         super(message);
     }
 }
