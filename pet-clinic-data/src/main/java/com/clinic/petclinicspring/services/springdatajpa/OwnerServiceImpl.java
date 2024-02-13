@@ -14,7 +14,7 @@ import java.util.Set;
 
 /**
  * Alternative implementation of the owner service,
- * opposite of map implementation {@link com.clinic.petclinicspring.services.map.OwnerServiceMap}.
+ * opposite of map implementation {@link com.clinic.petclinicspring.services.map.OwnerServiceMap} using JPA.
  */
 @Service
 @Profile("springdatajpa")

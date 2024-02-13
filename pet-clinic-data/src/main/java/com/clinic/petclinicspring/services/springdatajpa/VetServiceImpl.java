@@ -12,7 +12,7 @@ import java.util.Set;
 
 /**
  * Alternative implementation of the vet service,
- * opposite of map implementation {@link com.clinic.petclinicspring.services.map.VetServiceMap}.
+ * opposite of map implementation {@link com.clinic.petclinicspring.services.map.VetServiceMap} using JPA.
  */
 @Service
 @Profile("springdatajpa")
