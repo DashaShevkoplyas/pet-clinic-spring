@@ -1,5 +1,9 @@
 package com.clinic.petclinicspring.services.springdatajpa;
 
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
+
 import com.clinic.petclinicspring.models.Owner;
 import com.clinic.petclinicspring.repositories.OwnerRepository;
 import com.clinic.petclinicspring.repositories.PetRepository;
@@ -13,10 +17,6 @@ import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.util.Optional;
 import java.util.Set;
-
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
 class OwnerServiceImplTest {

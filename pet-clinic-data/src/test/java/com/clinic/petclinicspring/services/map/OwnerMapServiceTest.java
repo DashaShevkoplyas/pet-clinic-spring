@@ -1,12 +1,12 @@
 package com.clinic.petclinicspring.services.map;
 
+import static java.util.stream.Collectors.toSet;
+import static org.assertj.core.api.Assertions.assertThat;
+
 import com.clinic.petclinicspring.models.BaseEntity;
 import com.clinic.petclinicspring.models.Owner;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import static java.util.stream.Collectors.toSet;
-import static org.assertj.core.api.Assertions.assertThat;
 
 class OwnerMapServiceTest {
     private static final Long OWNER_ID = 1L;
