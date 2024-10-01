@@ -10,6 +10,8 @@ jobs:
     # Specify the execution environment. You can specify an image from Docker Hub or use one of our convenience images from CircleCI's Developer Hub.
     # See: https://circleci.com/docs/executor-intro/ & https://circleci.com/docs/configuration-reference/#executor-job
     docker:
+      # Specify the version you desire here
+      # See: https://circleci.com/developer/images/image/cimg/openjdk
       - image: cimg/openjdk:17.0.11
 
     # Add steps to the job
@@ -18,19 +20,17 @@ jobs:
       # Checkout the code as the first step.
       - checkout
 
-      - run: java --version
-
-      -run:
-        name: Install
-        command: mvn install
-        # Use mvn clean and package as the standard maven build phase
-        - run:
-            name: Build
-            command: mvn -B -DskipTests clean package
-        # Then run your tests!
-        - run:
-            name: Test
-            command: mvn test
+     - run:
+          name: Install
+          command: mvn install
+      # Use mvn clean and package as the standard maven build phase
+      - run:
+          name: Build
+          command: mvn -B -DskipTests clean package
+      # Then run your tests!
+      - run:
+          name: Test
+          command: mvn test
 
 # Orchestrate jobs using workflows
 # See: https://circleci.com/docs/workflows/ & https://circleci.com/docs/configuration-reference/#workflows
