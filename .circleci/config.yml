@@ -20,9 +20,6 @@ jobs:
       # Checkout the code as the first step.
       - checkout
 
-     - run:
-          name: Install
-          command: mvn install
       # Use mvn clean and package as the standard maven build phase
       - run:
           name: Build
